@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: ./Dockerfilevscode
+    volumes:
+      - ./:/root/workspace
+      - vs-server:/root/.vscode-server/extensions
+volumes:
+  vs-server: {}
